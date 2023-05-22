@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MarcaTracker</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lista_de_marcas_title">Lista de marcas</string>
+    <string name="nueva_marca_title">Nueva marca</string>
+    <string name="nombre_hint">Nombre</string>
+    <string name="guardar_button_text">Guardar</string>
+    <string name="informaci_n_de_la_marca_title">Información de la marca</string>
+    <string name="nombre_de_la_marca_text">nombre de la marca</string>
+    <string name="sector_de_la_marca_text">sector de la marca</string>
 </resources>

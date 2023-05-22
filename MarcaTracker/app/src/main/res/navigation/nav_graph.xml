@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/marcasFragment">
+
+    <fragment
+        android:id="@+id/marcasFragment"
+        android:name="com.example.marcatracker.ui.MarcasFragment"
+        android:label="fragment_marcas"
+        tools:layout="@layout/fragment_marcas" >
+        <action
+            android:id="@+id/action_marcasFragment_to_marcaInfoFragment"
+            app:destination="@id/marcaInfoFragment" />
+        <action
+            android:id="@+id/action_marcasFragment_to_marcaFormFragment"
+            app:destination="@id/marcaFormFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/marcaFormFragment"
+        android:name="com.example.marcatracker.ui.MarcaFormFragment"
+        android:label="fragment_marca_form"
+        tools:layout="@layout/fragment_marca_form" />
+    <fragment
+        android:id="@+id/marcaInfoFragment"
+        android:name="com.example.marcatracker.ui.MarcaInfoFragment"
+        android:label="fragment_marca_info"
+        tools:layout="@layout/fragment_marca_info" />
+</navigation>
