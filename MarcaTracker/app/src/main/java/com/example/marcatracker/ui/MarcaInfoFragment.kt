@@ -5,10 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.marcatracker.R
+import com.example.marcatracker.databinding.FragmentMarcaFormBinding
+import com.example.marcatracker.databinding.FragmentMarcaInfoBinding
+import com.example.marcatracker.ui.viewmodel.MarcaViewModel
 
 class MarcaInfoFragment : Fragment() {
 
+    private val marcaViewModel: MarcaViewModel by activityViewModels {
+        MarcaViewModel.Factory
+    }
+
+    private lateinit var binding: FragmentMarcaInfoBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
@@ -17,8 +27,17 @@ class MarcaInfoFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_marca_info, container, false)
+        binding = FragmentMarcaInfoBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setViewModel()
+    }
+
+    private fun setViewModel() {
+        binding.viewmodel = marcaViewModel
+    }
 }
